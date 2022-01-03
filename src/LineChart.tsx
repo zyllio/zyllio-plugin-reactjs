@@ -1,0 +1,44 @@
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ChartOptions } from 'chart.js';
+import { Line } from 'react-chartjs-2';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
+
+export const options: ChartOptions<"line"> = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Line Chart',
+    },
+  },
+}
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      data: labels.map(() => Math.random() * 1000),
+      borderColor: '#154784',
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    }
+  ],
+};
+
+export function LineChart() {
+  return <Line options={options} data={data} />;
+}
+
+export default LineChart;

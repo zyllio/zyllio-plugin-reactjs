@@ -1,6 +1,17 @@
+/// <reference types="@zyllio/zy-sdk" />
+
 import ReactiveElements from 'reactive-elements';
+import { ChartMetadata } from './line-chart.metadata';
+import LineChart from "./LineChart";
 
-import './index.css';
-import App from './App';
+console.log('Plugin Chart started')
 
-ReactiveElements('app-component', App, { useShadowDom: true })
+export function App() {
+  return <LineChart />;
+}
+
+const customElement = ReactiveElements(ChartMetadata.id, App, { useShadowDom: true })
+
+// console.log('reactiveElements: ', customElement);
+
+zySdk.services.registry.registerComponent(ChartMetadata, customElement)
