@@ -1,1 +1,1 @@
-declare module 'reactive-elements'
+declare module 'react-to-webcomponent'
