@@ -12,7 +12,7 @@ export const ChartMetadata: ComponentMetadataModel = {
   subCategory: 'Plugins',
   hidden: false,
   keepRatio: false,
-  properties: [/*{
+  properties: [{
     id: 'table',
     name: 'Table',
     type: PropertyTypes.Table,
@@ -31,7 +31,7 @@ export const ChartMetadata: ComponentMetadataModel = {
     type: PropertyTypes.Column,
     tootip: '',
     default: '',
-  }*/],
+  }],
   styles: [{
     id: 'width',
     name: 'Width',
