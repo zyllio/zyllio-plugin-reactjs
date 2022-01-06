@@ -2,30 +2,31 @@
   "name": "zyllio-plugin-reactjs",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@types/node": "^16.11.18",
-    "@types/react": "^16.0.0",
-    "@types/react-dom": "^16.0.0",
-    "@zyllio/zy-sdk": "latest",
-    "chart.js": "^3.7.0",
-    "react": "^16.0.2",
-    "react-chartjs-2": "^4.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "5.0.0",
-    "react-to-webcomponent": "^1.5.1",
-    "typescript": "^4.5.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "lt --port 3000"
+    "deploy": "lt --port 3000",
+    "deploy2": "copyfiles -f ./build/static/js/main.*.js ../zyllio-studio/client-app/src/assets"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+  "dependencies": {
+    "chart.js": "^3.7.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.0.2",
+    "react-chartjs-2": "^4.0.0",
+    "react-dom": "^16.0.0",
+    "react-to-webcomponent": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.18",
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^16.0.0",
+    "@zyllio/zy-sdk": "latest",
+    "copyfiles": "^2.4.1",
+    "localtunnel": "^2.0.2",
+    "react-scripts": "5.0.0",
+    "typescript": "^4.5.4"
   },
   "browserslist": {
     "production": [
@@ -38,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "localtunnel": "^2.0.2"
   }
 }

@@ -15,20 +15,20 @@ export const ChartMetadata: ComponentMetadataModel = {
   properties: [{
     id: 'table',
     name: 'Table',
-    type: PropertyTypes.Table,
+    type: 'table',
     tootip: 'The table being used to populate',
     default: '',
     main: true
   }, {
     id: 'labels',
     name: 'Labels',
-    type: PropertyTypes.Column,
+    type: 'column',
     tootip: '',
     default: '',
   }, {
     id: 'values',
     name: 'Values',
-    type: PropertyTypes.Column,
+    type: 'column',
     tootip: '',
     default: '',
   }],
