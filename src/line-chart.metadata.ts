@@ -13,6 +13,12 @@ export const ChartMetadata: ComponentMetadataModel = {
   hidden: false,
   keepRatio: false,
   properties: [{
+    id: 'title',
+    name: 'Title',
+    type: 'text',
+    tootip: 'The text of the legend',
+    default: 'Title',
+  }, {
     id: 'table',
     name: 'Table',
     type: 'table',
@@ -42,7 +48,7 @@ export const ChartMetadata: ComponentMetadataModel = {
     id: 'height',
     name: 'Height',
     type: 'height',
-    default: '30px'
+    default: '200px'
   }, {
     id: '--color',
     name: 'Color',

@@ -11,33 +11,39 @@ ChartJS.register(
   Legend
 )
 
-export const options: ChartOptions<"line"> = {
-  responsive: true,
-  plugins: {
-    legend: {
-      display: false
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-    },
-  },
+interface Props {
+  title: string
+  labels: string[]
+  values: string[]
+  color: string
 }
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+export function LineChart(props: Props) {
+ 
+  const options: ChartOptions<"line"> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      },
+      title: {
+        display: true,
+        text: props.title,
+      },
+    },
+  }
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      data: labels.map(() => Math.random() * 1000),
-      borderColor: '#154784',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    }
-  ],
-};
+  const data = {
+    labels: props.labels,
+    datasets: [
+      {
+        data: props.values,
+        borderColor: props.color,
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      }
+    ],
+  }
 
-export function LineChart() {
   return <Line options={options} data={data} />;
 }
 
