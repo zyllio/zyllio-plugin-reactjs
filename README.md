@@ -15,8 +15,9 @@ To build this plugin, Node.js 14+ is required
 # Experiment
 
 Install this pre-built file to experiment the plugin:
-> `https://zyllio.github.io/zyllio-plugin-reactjs/build/static/js/plugin.js`
-
+```
+https://zyllio.github.io/zyllio-plugin-reactjs/build/static/js/plugin.js
+```
 
 # Build
 
