@@ -78,7 +78,8 @@ export function App(props: Props) {
   }
 }
 
-App.propTypes = {
+/* Cast prevents Treeshaking ?? */
+(App as any).propTypes = {
   'data-table': PropTypes.string.isRequired,
   'data-labels': PropTypes.string.isRequired,
   'data-values': PropTypes.string.isRequired,
