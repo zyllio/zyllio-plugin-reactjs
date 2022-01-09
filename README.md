@@ -1,6 +1,6 @@
 # Zyllio Plugin ReactJS : Chart
 
-This Zyllio plugin is a Chart Component implmented using [ReactJS](https://reactjs.org/)
+This Zyllio plugin is a Chart Component implemented using [ReactJS](https://reactjs.org/)
 
 This Component uses the Zyllio SDK Storage API to retrieve the Chart data
 
