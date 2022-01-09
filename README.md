@@ -12,6 +12,13 @@ This Component uses the Zyllio SDK Storage API to retrieve the Chart data
 
 To build this plugin, Node.js 14+ is required
 
+# Experiment
+
+To experiment the plugin using pre-built Javasript file, install 
+install :
+> `https://zyllio.github.io/zyllio-plugin-reactjs/build/static/js/plugin.js`
+
+
 # Build
 
 ```shell
