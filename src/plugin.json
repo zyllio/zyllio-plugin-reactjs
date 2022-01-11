@@ -1,0 +1,6 @@
+{
+  "name": "Line Chart Component",
+  "description": "This plugins provides a Chart Component (using ReactJS)",
+  "company": "Zyllio team",
+  "icon": "https://studio.zyllio.com/assets/icon.png"
+}
