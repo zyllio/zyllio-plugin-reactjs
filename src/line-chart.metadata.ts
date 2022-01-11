@@ -8,8 +8,8 @@ export const ChartMetadata: ComponentMetadataModel = {
   id: 'custom-chart',
   icon: IconData,
   label: 'Chart',
-  category: 'Basics',
-  subCategory: 'Plugins',
+  category: 'Plugins',
+  subCategory: 'Charts',
   hidden: false,
   keepRatio: false,
   properties: [{
