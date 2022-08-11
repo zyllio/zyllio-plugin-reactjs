@@ -1,7 +1,7 @@
 /// <reference types="@zyllio/zy-sdk" />
 
 import reactToWebComponent from "react-to-webcomponent"
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
@@ -65,7 +65,11 @@ export function App(props: Props) {
   }, [props['data-title'], props['data-table'], props['data-labels'], props['data-values']]);
 
   
-  const style = {
+  const style: CSSProperties = {
+    width: '100%',
+    height: '400px',
+    padding: '10px',
+    boxSizing: 'border-box',
     color: 'var(--color)',
   }
 

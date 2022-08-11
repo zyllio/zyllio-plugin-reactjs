@@ -11,7 +11,6 @@ export const ChartMetadata: ComponentMetadataModel = {
   category: 'Plugins',
   subCategory: 'Charts',
   hidden: false,
-  keepRatio: false,
   properties: [{
     id: 'title',
     name: 'Title',
@@ -39,17 +38,6 @@ export const ChartMetadata: ComponentMetadataModel = {
     default: '',
   }],
   styles: [{
-    id: 'width',
-    name: 'Width',
-    type: 'width',
-    default: '340px'
-  },
-  {
-    id: 'height',
-    name: 'Height',
-    type: 'height',
-    default: '200px'
-  }, {
     id: '--color',
     name: 'Color',
     type: 'color',
