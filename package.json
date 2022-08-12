@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run rename && copyfiles -f src/plugin.json dist && copyfiles build/static/js/plugin.js -f dist",
+    "build": "react-scripts build && npm run rename && copyfiles -f src/sample.json dist && copyfiles -f src/plugin.json dist && copyfiles build/static/js/plugin.js -f dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rename": "renamer -f /main.*js/ -r plugin.js ./build/static/js/*"
+    "rename": "renamer -f /main.*js/ -r plugin.js ./build/static/js/*",
+    "tester": "zyllio ./dist plugin.js custom-chart"
   },
   "dependencies": {
     "chart.js": "^3.7.0",
@@ -21,8 +22,8 @@
     "@types/node": "^16.11.18",
     "@types/react": "^16.0.0",
     "@types/react-dom": "^16.0.0",
-    "@zyllio/zy-sdk": "latest",
     "@zyllio/zy-cli": "latest",
+    "@zyllio/zy-sdk": "latest",
     "copyfiles": "^2.4.1",
     "react-scripts": "5.0.0",
     "renamer": "^4.0.0",
