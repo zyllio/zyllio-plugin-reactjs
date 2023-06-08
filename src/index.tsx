@@ -1,5 +1,3 @@
-/// <reference types="@zyllio/zy-sdk" />
-
 import reactToWebComponent from "react-to-webcomponent"
 import React, { useEffect, useState, useCallback, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
@@ -7,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import LineChart from "./LineChart";
 import { ChartMetadata } from './line-chart.metadata';
+import { StaticPropertyValueModel, TablePropertyValueModel, ColumnPropertyValueModel } from "@zyllio/zy-sdk";
 
 console.log('Plugin Chart started')
 
