@@ -1,88 +1,27 @@
 {
-  "labels": [
-    "Name",
-    "Age",
-    "Id",
-    "Breed",
-    "Sex",
-    "Photo",
-    "State code",
-    "Size",
-    "City",
-    "_id"
-  ],
-  "values": [
-    [
-      "LEO2",
-      "2",
-      "32887253",
-      "Terrier (Unknown Type, Small)",
-      "m",
-      "https://pet-uploads.adoptapet.com/f/1/6/592477493.jpg",
-      "MA",
-      "Small 25 lbs (11 kg) or less",
-      "Boston",
-      "32887253"
-    ],
-    [
-      "JORDAN",
-      "1",
-      "33197246",
-      "Chihuahua",
-      "m",
-      "https://pet-uploads.adoptapet.com/b/3/2/591839208.jpg",
-      "MA",
-      "Small 25 lbs (11 kg) or less",
-      "Orlando",
-      "33197246"
-    ],
-    [
-      "IZZY",
-      "5",
-      "33193605",
-      "Chihuahua",
-      "m",
-      "https://pet-uploads.adoptapet.com/a/6/6/591765789.jpg",
-      "MA",
-      "Small 25 lbs (11 kg) or less",
-      "Boston",
-      "33193605"
-    ],
-    [
-      "JASMINE",
-      "8",
-      "33170666",
-      "Chihuahua",
-      "f",
-      "https://pet-uploads.adoptapet.com/f/7/c/592480397.jpg",
-      "MA",
-      "Small 25 lbs (11 kg) or less",
-      "Atlanta",
-      "33170666"
-    ],
-    [
-      "ROCKY",
-      "4",
-      "32865086",
-      "Terrier (Unknown Type, Medium)",
-      "m",
-      "https://pet-uploads.adoptapet.com/e/1/b/583779486.jpg",
-      "MA",
-      "Med. 26-60 lbs (12-27 kg)",
-      "New york",
-      "32865086"
-    ],
-    [
-      "CHICA",
-      "1",
-      "32931306",
-      "Chihuahua",
-      "f",
-      "https://pet-uploads.adoptapet.com/7/c/a/592480592.jpg",
-      "MA",
-      "Small 25 lbs (11 kg) or less",
-      "Washington",
-      "32931306"
-    ]
-  ]
+  "items": [{
+    "_id": "4",
+    "date": "2024-02-10",
+    "attendees": "1253",
+    "label": "No-Code Meetup Paris",
+    "description": "Explore the latest innovations in the world of code-free development and automation"
+  }, {
+    "_id": "5",
+    "date": "2024-04-01",
+    "attendees": "587",
+    "label": "No-Code Showcase",
+    "description": "Showcasing the latest trends and tools in the world of no-code and low-code technology"
+  }, {
+    "_id": "6",
+    "date": "2024-05-11",
+    "attendees": "2652",
+    "label": "No-Code Meetup London",
+    "description": "Featuring interactive workshops, keynote speeches from industry leaders, and networking opportunities for professionals"
+  }, {
+    "_id": "3",
+    "date": "2023-05-23",
+    "attendees": "9552",
+    "label": "No-Code Meetup Berlin",
+    "description": "Discover and discuss the newest advancements in no-code platforms and software"
+  }]
 }

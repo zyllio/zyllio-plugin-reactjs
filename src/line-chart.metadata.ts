@@ -8,6 +8,7 @@ const IconData = `
 
 export const ChartMetadata: ComponentMetadataModel = {
   id: 'custom-chart',
+  metadataVersion: 2,
   icon: IconData,
   label: 'Chart',
   category: 'Plugins',
@@ -20,7 +21,7 @@ export const ChartMetadata: ComponentMetadataModel = {
     tootip: 'The text of the legend',
     default: 'Title',
   }, {
-    id: 'table',
+    id: 'data',
     name: 'Table',
     type: 'table',
     tootip: 'The table being used to populate',
