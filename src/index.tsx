@@ -36,6 +36,7 @@ export function App(props: Props) {
   useEffect(() => {
 
     setTitle(props.title)
+    console.log('props.title', props.title)
 
     const labels = props.data.items.map(row => row.label)
 
