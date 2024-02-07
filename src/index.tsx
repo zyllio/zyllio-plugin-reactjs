@@ -16,9 +16,9 @@ interface Props {
 
 export function App({ title, data }: Props) {
 
-  const labels = data.items.map(row => row.label)
+  const labels = (data) ? data.items.map(row => row.label) : []
 
-  const values = data.items.map(row => row.value)
+  const values = (data) ? data.items.map(row => row.value) : []
 
   const [color, setColor] = useState<string>('')
 
