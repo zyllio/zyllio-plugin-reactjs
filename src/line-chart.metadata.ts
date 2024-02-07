@@ -28,14 +28,14 @@ export const ChartMetadata: ComponentMetadataModel = {
     default: '',
     main: true
   }, {
-    id: 'labels',
-    name: 'Labels',
+    id: 'label',
+    name: 'Label',
     type: 'column',
     tootip: '',
     default: '',
   }, {
-    id: 'values',
-    name: 'Values',
+    id: 'value',
+    name: 'Value',
     type: 'column',
     tootip: '',
     default: '',

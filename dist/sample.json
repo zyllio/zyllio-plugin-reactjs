@@ -1,27 +1,19 @@
 {
   "items": [{
     "_id": "4",
-    "date": "2024-02-10",
-    "attendees": "1253",
-    "label": "No-Code Meetup Paris",
-    "description": "Explore the latest innovations in the world of code-free development and automation"
+    "label": "2024-02-10",
+    "value": "1253"
   }, {
     "_id": "5",
-    "date": "2024-04-01",
-    "attendees": "587",
-    "label": "No-Code Showcase",
-    "description": "Showcasing the latest trends and tools in the world of no-code and low-code technology"
+    "label": "2024-04-01",
+    "value": "587"
   }, {
     "_id": "6",
-    "date": "2024-05-11",
-    "attendees": "2652",
-    "label": "No-Code Meetup London",
-    "description": "Featuring interactive workshops, keynote speeches from industry leaders, and networking opportunities for professionals"
+    "label": "2024-05-11",
+    "value": "2652"
   }, {
     "_id": "3",
-    "date": "2023-05-23",
-    "attendees": "9552",
-    "label": "No-Code Meetup Berlin",
-    "description": "Discover and discuss the newest advancements in no-code platforms and software"
+    "label": "2023-05-23",
+    "value": "9552"
   }]
 }

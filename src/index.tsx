@@ -3,16 +3,16 @@ import React, { useEffect, useState, useCallback, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
+import { ListColumnItemsModel } from "@zyllio/zy-sdk";
+
 import LineChart from "./LineChart";
 import { ChartMetadata } from './line-chart.metadata';
 
 console.log('Plugin Chart started')
 
 interface Props {
-  data: any
-  labels: any
-  values: any
-  title: any
+  data: ListColumnItemsModel
+  title: string
 }
 
 export function App(props: Props) {
@@ -41,22 +41,21 @@ export function App(props: Props) {
 
       setTitle(props.title)
 
-      const rows = props.data
-      console.log('rows', rows)
+      const labels = props.data.items.map(row => row.label)
 
-      // const labelsColumnIndex = rows?.labels.findIndex(l => l === labelsColumn)
-      // const valuesColumnIndex = rows?.labels.findIndex(l => l === valuesColumn)
+ console.log("labels ", labels);
 
-      const newLabels = rows.items    ?.values.map(row => row[labelsColumnIndex!])
-      // const newValues = rows?.values.map(row => row[valuesColumnIndex!])
+      const values = props.data.items.map(row => row.value)
 
-      // setLabels(newLabels || [])
-      // setValues(newValues || [])
+ console.log("values ", values);
+
+      setLabels(labels || [])
+      setValues(values || [])
     }
 
     init()
 
-  }, [props.title, props.data, props.labels, props.values]);
+  }, [props.title, props.data]);
 
   
   const style: CSSProperties = {
@@ -77,10 +76,8 @@ export function App(props: Props) {
 }
 
 /* Cast prevents Treeshaking ?? */
-(App as any).propTypes = {
+App.propTypes = {
   'data': PropTypes.string.isRequired,
-  'labels': PropTypes.string.isRequired,
-  'values': PropTypes.string.isRequired,
   'title': PropTypes.string.isRequired
 }
 
