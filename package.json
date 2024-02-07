@@ -16,7 +16,7 @@
     "react": "^16.0.2",
     "react-chartjs-2": "^4.0.0",
     "react-dom": "^16.0.0",
-    "react-to-webcomponent": "^1.5.1"
+    "react-to-webcomponent": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.18",

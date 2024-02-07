@@ -1,7 +1,6 @@
 import reactToWebComponent from "react-to-webcomponent"
-import React, { useEffect, useState, useCallback, CSSProperties } from 'react';
+import React, { useState, useCallback, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 
 import { ListColumnItemsModel } from "@zyllio/zy-sdk";
 
@@ -15,13 +14,11 @@ interface Props {
   title: string
 }
 
-export function App(props: Props) {
+export function App({ title, data }: Props) {
 
-  const [title, setTitle] = useState<string>(props.title)
+  const labels = data.items.map(row => row.label)
 
-  const [labels, setLabels] = useState<string[]>([])
-
-  const [values, setValues] = useState<string[]>([])
+  const values = data.items.map(row => row.value)
 
   const [color, setColor] = useState<string>('')
 
@@ -33,22 +30,6 @@ export function App(props: Props) {
 
   }, [])
 
-  useEffect(() => {
-
-    setTitle(props.title)
-    console.log('props', props)
-    console.log('props.title', props.title)
-
-    const labels = props.data.items.map(row => row.label)
-
-    const values = props.data.items.map(row => row.value)
-
-    setLabels(labels)
-    setValues(values)
-
-  }, [props.title, props.data]);
-
-
   const style: CSSProperties = {
     width: '100%',
     height: '400px',
@@ -57,7 +38,7 @@ export function App(props: Props) {
     color: 'var(--color)',
   }
 
-  if (labels.length === 0) {
+  if (data === undefined) {
     return 'Loading...'
   } else {
     return <div style={style} ref={nodeRef}>
@@ -66,12 +47,12 @@ export function App(props: Props) {
   }
 }
 
-/* Cast prevents Treeshaking ?? */
-App.propTypes = {
-  'data': PropTypes.object.isRequired,
-  'title': PropTypes.string.isRequired
-}
+const customElement = reactToWebComponent(App, React, ReactDOM, {
+  props: {
+    'data': 'object',
+    'title': 'string'
+  }
+})
 
-const customElement = reactToWebComponent(App, React, ReactDOM, { shadow: true })
 
 zySdk.services.registry.registerComponent(ChartMetadata, customElement)
