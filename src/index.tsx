@@ -41,6 +41,7 @@ export function App({ title, data }: Props) {
 }
 
 const customElement = reactToWebComponent(App, React, ReactDOM, {
+  shadow: true,
   props: {
     'data': 'object',
     'title': 'string'
