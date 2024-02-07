@@ -15,6 +15,7 @@ interface Props {
 }
 
 export function App({ title, data }: Props) {
+  console.log('title, data', title, data)
 
   const labels = (data) ? data.items.map(row => row.label) : []
 
