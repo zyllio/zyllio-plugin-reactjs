@@ -15,13 +15,10 @@ interface Props {
 }
 
 export function App({ title, data }: Props) {
-  console.log('title, data', title, data)
 
   const labels = (data) ? data.items.map(row => row.label) : []
-  console.log('labels', labels)
 
   const values = (data) ? data.items.map(row => row.value) : []
-  console.log('values', values)
 
   const style: CSSProperties = {
     width: '100%',
