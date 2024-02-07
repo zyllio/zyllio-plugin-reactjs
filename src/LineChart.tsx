@@ -15,7 +15,6 @@ interface Props {
   title: string
   labels: string[]
   values: string[]
-  color: string
 }
 
 export function LineChart(props: Props) {
@@ -38,7 +37,6 @@ export function LineChart(props: Props) {
     datasets: [
       {
         data: props.values,
-        borderColor: props.color,
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       }
     ],
