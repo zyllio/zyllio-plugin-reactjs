@@ -10,7 +10,7 @@ This Component uses the Zyllio SDK Storage API to retrieve the Chart data
 
 # Development environment
 
-To build this plugin, Node.js 14+ is required
+To build this plugin, Node.js 18+ is required
 
 # Experiment
 
