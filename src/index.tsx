@@ -36,14 +36,15 @@ export function App(props: Props) {
   useEffect(() => {
 
     setTitle(props.title)
+    console.log('props', props)
     console.log('props.title', props.title)
 
     const labels = props.data.items.map(row => row.label)
 
     const values = props.data.items.map(row => row.value)
 
-    setLabels(labels || [])
-    setValues(values || [])
+    setLabels(labels)
+    setValues(values)
 
   }, [props.title, props.data]);
 
@@ -67,7 +68,7 @@ export function App(props: Props) {
 
 /* Cast prevents Treeshaking ?? */
 App.propTypes = {
-  'data': PropTypes.string.isRequired,
+  'data': PropTypes.object.isRequired,
   'title': PropTypes.string.isRequired
 }
 
