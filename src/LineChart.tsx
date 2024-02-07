@@ -18,7 +18,6 @@ interface Props {
 }
 
 export function LineChart(props: Props) {
-  console.log('props', props)
  
   const options: ChartOptions<"line"> = {
     responsive: false,
