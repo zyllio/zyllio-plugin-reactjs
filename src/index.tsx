@@ -27,37 +27,26 @@ export function App(props: Props) {
 
   const nodeRef = useCallback(node => {
 
-    const style = getComputedStyle(node) as any
-    
-    setColor(style['color'])    
+    const style = getComputedStyle(node) as CSSStyleDeclaration
+
+    setColor(style['color'])
 
   }, [])
 
   useEffect(() => {
 
-    async function init() {
+    setTitle(props.title)
 
-      console.log('props', props)
+    const labels = props.data.items.map(row => row.label)
 
-      setTitle(props.title)
+    const values = props.data.items.map(row => row.value)
 
-      const labels = props.data.items.map(row => row.label)
+    setLabels(labels || [])
+    setValues(values || [])
 
- console.log("labels ", labels);
+  })
 
-      const values = props.data.items.map(row => row.value)
 
- console.log("values ", values);
-
-      setLabels(labels || [])
-      setValues(values || [])
-    }
-
-    init()
-
-  }, [props.title, props.data]);
-
-  
   const style: CSSProperties = {
     width: '100%',
     height: '400px',
@@ -70,8 +59,8 @@ export function App(props: Props) {
     return 'Loading...'
   } else {
     return <div style={style} ref={nodeRef}>
-        <LineChart title={title} labels={labels} values={values} color={color} />
-      </div>;
+      <LineChart title={title} labels={labels} values={values} color={color} />
+    </div>;
   }
 }
 

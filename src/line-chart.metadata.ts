@@ -12,7 +12,7 @@ export const ChartMetadata: ComponentMetadataModel = {
   icon: IconData,
   label: 'Chart',
   category: 'Plugins',
-  subCategory: 'Charts',
+  subCategory: 'Plugins',
   hidden: false,
   properties: [{
     id: 'title',
