@@ -21,7 +21,7 @@ export function LineChart(props: Props) {
   console.log('props', props)
  
   const options: ChartOptions<"line"> = {
-    responsive: true,
+    responsive: false,
     plugins: {
       legend: {
         display: false
