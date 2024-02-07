@@ -44,7 +44,7 @@ export function App(props: Props) {
     setLabels(labels || [])
     setValues(values || [])
 
-  })
+  }, [props.title, props.data]);
 
 
   const style: CSSProperties = {
