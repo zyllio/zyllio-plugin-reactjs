@@ -35,9 +35,9 @@ export function LineChart(props: Props) {
 
   const data = {
     labels: props.labels,
-    datasets: [
-      {
+    datasets: [{
         data: props.values,
+        borderColor: '#fca311',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       }
     ],
