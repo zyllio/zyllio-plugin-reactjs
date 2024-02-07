@@ -23,13 +23,16 @@ export function App({ title, data }: Props) {
 
   const [color, setColor] = useState<string>('')
 
-  const nodeRef = useCallback(node => {
+  // const nodeRef = useCallback(node => {
 
-    const style = getComputedStyle(node) as CSSStyleDeclaration
+  //   const style = getComputedStyle(node) as CSSStyleDeclaration
 
-    setColor(style['color'])
+  //   setColor(style['color'])
 
-  }, [])
+  // }, [])
+
+  
+
 
   const style: CSSProperties = {
     width: '100%',
@@ -42,8 +45,8 @@ export function App({ title, data }: Props) {
   if (data === undefined) {
     return 'Loading...'
   } else {
-    return <div style={style} ref={nodeRef}>
-      <LineChart title={title} labels={labels} values={values} color={color} />
+    return <div style={style} >
+      <LineChart title={title} labels={labels} values={values} color="#fca311" />
     </div>;
   }
 }

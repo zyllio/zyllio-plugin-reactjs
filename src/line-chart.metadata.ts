@@ -40,11 +40,5 @@ export const ChartMetadata: ComponentMetadataModel = {
     tootip: '',
     default: '',
   }],
-  styles: [{
-    id: '--color',
-    name: 'Color',
-    type: 'color',
-    default: '#fca311'
-  }  
-  ]
+  styles: []
 }
